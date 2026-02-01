@@ -13,7 +13,7 @@ x_train = pad_sequences(x_train, maxlen=max_len, padding="post", truncating="pos
 x_test = pad_sequences(x_test, maxlen=max_len, padding="post", truncating="post")
 
 model = tf.keras.Sequential([
-    tf.keras.layers.Embedding(input_dim=num_words, output_dim=128, input_length=max_len),
+    tf.keras.layers.Embedding(input_dim=num_words, output_dim=128, """input_length=max_len newer keras already infer this"""),
     tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(64, dropout=0.2)),
     tf.keras.layers.Dense(64, activation="relu"),
     tf.keras.layers.Dropout(0.3),
