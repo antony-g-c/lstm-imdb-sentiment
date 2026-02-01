@@ -1,11 +1,9 @@
-import numpy as np
 import tensorflow as tf
 from tensorflow.keras.datasets import imdb
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from sklearn.metrics import accuracy_score, classification_report
 
 tf.random.set_seed(42)
-np.random.seed(42)
 
 num_words = 20000
 (x_train, y_train), (x_test, y_test) = imdb.load_data(num_words=num_words)
